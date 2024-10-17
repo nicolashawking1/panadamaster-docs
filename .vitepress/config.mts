@@ -21,15 +21,15 @@ export default defineConfig({
       {
         text: "TG bridge",
         items: [
-          { text: "Intro", link: "/tg/intro" },
+          { text: "Intro", link: "/tg_bridge/intro" },
           {
-            text: "Bridge", link: "/tg/bridge",
+            text: "Bridge", link: "/tg_bridge/bridge",
             items: [
-              { text: "Unity to H5", link: "/tg/bridge/u2h" },
-              { text: "H5 to Unity", link: "/tg/bridge/h2u" }
+              { text: "Unity to H5", link: "/tg_bridge/bridge/u2h" },
+              { text: "H5 to Unity", link: "/tg_bridge/bridge/h2u" }
             ]
           }, {
-            text: "Adaptation", link: "/tg/adaptation"
+            text: "Adaptation", link: "/tg_bridge/adaptation"
           }
         ]
       },

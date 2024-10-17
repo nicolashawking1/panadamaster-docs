@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: alt
       text: Start
-      link: /TG/intro
+      link: /tg_bridge/intro
     - theme: brand
       text: Assets
       link: /assets/intro
