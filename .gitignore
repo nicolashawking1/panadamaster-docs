@@ -1,5 +1,4 @@
 cache
 node_modules
-
-/.vitepress
 yarn.lock
+dist
