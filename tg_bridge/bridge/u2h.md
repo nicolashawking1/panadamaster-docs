@@ -31,7 +31,6 @@
 | ------------- | :----: | :-------------------- |
 | user_id       | string | 用户ID                |
 | nickname      | string | 用户昵称              |
-| avatar_url    | string | 用户头像              |
 | init_data_raw | string | 原始数据 用于后端登陆 |
 
 ## 分享TG miniapp到会话 [share_mini_app_to_session]

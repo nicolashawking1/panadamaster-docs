@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: alt
       text: Start
-      link: /tg_bridge/intro
-    - theme: brand
-      text: Assets
-      link: /assets/intro
+      link: /solution/solution1
+    # - theme: brand
+    #   text: Assets
+    #   link: /assets/intro
 
 features:
   - title: Assets 
@@ -22,4 +22,3 @@ features:
   - title: Service
     details: Introduction to background services
 ---
-

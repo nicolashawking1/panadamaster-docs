@@ -25,7 +25,7 @@
 | invite_code |    string    |             |          |         |   邀请码    |
 | enable      |     bool     |             |          |         |    启用     |
 
-### 数据库 AccountBoundWallet
+### 数据库 AccountBoundWallet(后期扩展)
 
 | name       |            type             |     uniqueIndex     | not null | default | description |
 | ---------- | :-------------------------: | :-----------------: | :------: | :------ | :---------: |
@@ -35,7 +35,7 @@
 | chain_id   |            int64            |                     |    1     |         |  钱包链ID   |
 | address    |           string            | bound_wallet_unique |    1     |         |  钱包地址   |
 
-### 枚举 AccountBoundWalletEcology
+### 枚举 AccountBoundWalletEcology(后期扩展)
 
 | index | value  |
 | ----- | ------ |
@@ -59,22 +59,6 @@
 | exp        | 过期时间    |
 | iat        | 签发时间    |
 
-## 签到信息
-
-用户的`签到信息`，包括总签到`次数`，`连续签到天数`.
-
-需要维护一个`签到奖励表`,表示已`N`天为一个循环,连续签到每天的奖励,断签或者N+1都相当于第一天的奖励
-
-签到奖励在签到的时候根据`签到奖励表`，给予不同奖励.
-
-### 数据库 account_checkin
-
-TODO..
-
-### 数据库 account_checkin_reward
-
-TODO..
-
 ## 邀请功能
 
 用户在登陆的时候如果携带`invite_code`,需要创建邀请者关系
@@ -93,13 +77,20 @@ TODO..
 
 ### 数据库 account_referral
 
-TODO...
+| name         |     type     | uniqueIndex | not null | default | description |
+| ------------ | :----------: | :---------: | :------: | :------ | :---------: |
+| account_id   | int64/string |      1      |          |         |   账号ID    |
+| inviter_code |    string    |             |          |         |   邀请者    |
+| invitee_code |    string    |             |          |         |  被邀请者   |
+| enable       |     bool     |             |          |         |    启用     |
 
 ### 数据库 account_referral_config
 
-TODO...
+| name   | type  | uniqueIndex | not null | default | description |
+| ------ | :---: | :---------: | :------: | :------ | :---------: |
+| reward |  int  |             |          |         |  奖励内容   |
 
-## 等级
+<!-- ## 等级
 
 用户等级,包括`当前等级`，`当前经验`，`下一等级经验`
 
@@ -109,4 +100,21 @@ TODO...
 
 用户能装备那些装备?
 
-用户的加成都收到那些影响?
+用户的加成都收到那些影响? -->
+
+
+## 签到信息
+
+用户的`签到信息`，包括总签到`次数`，`连续签到天数`.
+
+需要维护一个`签到奖励表`,表示已`N`天为一个循环,连续签到每天的奖励,断签或者N+1都相当于第一天的奖励
+
+签到奖励在签到的时候根据`签到奖励表`，给予不同奖励.
+
+### 数据库 account_checkin
+
+TODO..
+
+### 数据库 account_checkin_reward
+
+TODO..

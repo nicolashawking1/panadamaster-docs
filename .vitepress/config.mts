@@ -1,21 +1,33 @@
-import { defineConfig } from 'vitepress'
+import { withMermaid } from "vitepress-plugin-mermaid";
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default withMermaid({
   title: "Panada Master",
   description: "panada master docs",
+  mermaidPlugin: {
+    class: "mermaid my-class", // set additional css classes for parent container 
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Assets', link: '/assets/intro' }
+      { text: 'Docs', link: '/solution/solution1' }
     ],
 
     sidebar: [
       {
         text: "Solution",
         items: [
-          { text: "Solution 1", link: "/solution/solution1" },
+          {
+            text: "Solution 1", link: "/solution/solution1",
+            items: [
+              { text: "TG Mini App", link: "/solution/solution1-tg" },
+              { text: "Service", link: "/solution/solution1-service" },
+              { text: "安全通讯", link: "/solution/solution1-security" },
+              { text: "运维相关", link: "/solution/solution1-server-ops" },
+              // { text: "Unity", link: "/solution/solution1-unity" },
+            ]
+          },
         ]
       },
       {
