@@ -17,7 +17,7 @@ TODO 待补充
 
 ## 用户系统的开发 (用户信息)
 
-[link to account manager](/service//accountManager.md)
+[link to account manager](/service/accountManager.md)
 
 ## 邀请系统的开发 (邀请关系)
 
